@@ -1,0 +1,18 @@
+{
+  "name": "wxctools",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "wecombot": "^1.0.0",
+    "wx-cloud-sdk": "^0.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.2"
+  }
+}
