@@ -1,6 +1,6 @@
-/wecombot
 /cloud-sdk
 package-lock.json
+.npmrc
 # Logs
 logs
 *.log
