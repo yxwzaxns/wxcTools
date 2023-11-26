@@ -6,6 +6,7 @@ const $ = db.command.aggregate
 class DataBase {
   constructor(optins = {}){
     this._table = optins.table
+    this._useTable = this._table
   }
 
   get collection(){
