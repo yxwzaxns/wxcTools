@@ -9,6 +9,11 @@ class DataBase {
     this._useTable = this._table
   }
 
+  setTable(table){
+    this._table = table
+    this.resetTable()
+  }
+
   get collection(){
     return db.collection(this._useTable)
   }
