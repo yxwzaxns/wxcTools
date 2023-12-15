@@ -1,9 +1,164 @@
-declare namespace WxCloudSdk {
-    namespace CloudDB {
-        export class DataBase {
-            queryBy<T>(): Promise<T[]>
-        }
+declare module "cdb" {
+    export const _: cloud.DB.DatabaseCommand;
+    export const $: {
+        abs(val: any): cloud.DB.DatabaseAggregateCommand;
+        add(val: any): cloud.DB.DatabaseAggregateCommand;
+        addToSet(val: any): cloud.DB.DatabaseAggregateCommand;
+        allElementsTrue(val: any): cloud.DB.DatabaseAggregateCommand;
+        and(val: any): cloud.DB.DatabaseAggregateCommand;
+        anyElementTrue(val: any): cloud.DB.DatabaseAggregateCommand;
+        arrayElemAt(val: any): cloud.DB.DatabaseAggregateCommand;
+        arrayToObject(val: any): cloud.DB.DatabaseAggregateCommand;
+        avg(val: any): cloud.DB.DatabaseAggregateCommand;
+        ceil(val: any): cloud.DB.DatabaseAggregateCommand;
+        cmp(val: any): cloud.DB.DatabaseAggregateCommand;
+        concat(val: any): cloud.DB.DatabaseAggregateCommand;
+        concatArrays(val: any): cloud.DB.DatabaseAggregateCommand;
+        cond(val: any): cloud.DB.DatabaseAggregateCommand;
+        convert(val: any): cloud.DB.DatabaseAggregateCommand;
+        dateFromParts(val: any): cloud.DB.DatabaseAggregateCommand;
+        dateToParts(val: any): cloud.DB.DatabaseAggregateCommand;
+        dateFromString(val: any): cloud.DB.DatabaseAggregateCommand;
+        dateToString(val: any): cloud.DB.DatabaseAggregateCommand;
+        dayOfMonth(val: any): cloud.DB.DatabaseAggregateCommand;
+        dayOfWeek(val: any): cloud.DB.DatabaseAggregateCommand;
+        dayOfYear(val: any): cloud.DB.DatabaseAggregateCommand;
+        divide(val: any): cloud.DB.DatabaseAggregateCommand;
+        eq(val: any): cloud.DB.DatabaseAggregateCommand;
+        exp(val: any): cloud.DB.DatabaseAggregateCommand;
+        filter(val: any): cloud.DB.DatabaseAggregateCommand;
+        first(val: any): cloud.DB.DatabaseAggregateCommand;
+        floor(val: any): cloud.DB.DatabaseAggregateCommand;
+        gt(val: any): cloud.DB.DatabaseAggregateCommand;
+        gte(val: any): cloud.DB.DatabaseAggregateCommand;
+        hour(val: any): cloud.DB.DatabaseAggregateCommand;
+        ifNull(val: any): cloud.DB.DatabaseAggregateCommand;
+        in(val: any): cloud.DB.DatabaseAggregateCommand;
+        indexOfArray(val: any): cloud.DB.DatabaseAggregateCommand;
+        indexOfBytes(val: any): cloud.DB.DatabaseAggregateCommand;
+        indexOfCP(val: any): cloud.DB.DatabaseAggregateCommand;
+        isArray(val: any): cloud.DB.DatabaseAggregateCommand;
+        isoDayOfWeek(val: any): cloud.DB.DatabaseAggregateCommand;
+        isoWeek(val: any): cloud.DB.DatabaseAggregateCommand;
+        isoWeekYear(val: any): cloud.DB.DatabaseAggregateCommand;
+        last(val: any): cloud.DB.DatabaseAggregateCommand;
+        let(val: any): cloud.DB.DatabaseAggregateCommand;
+        literal(val: any): cloud.DB.DatabaseAggregateCommand;
+        ln(val: any): cloud.DB.DatabaseAggregateCommand;
+        log(val: any): cloud.DB.DatabaseAggregateCommand;
+        log10(val: any): cloud.DB.DatabaseAggregateCommand;
+        lt(val: any): cloud.DB.DatabaseAggregateCommand;
+        lte(val: any): cloud.DB.DatabaseAggregateCommand;
+        ltrim(val: any): cloud.DB.DatabaseAggregateCommand;
+        map(val: any): cloud.DB.DatabaseAggregateCommand;
+        max(val: any): cloud.DB.DatabaseAggregateCommand;
+        mergeObjects(val: any): cloud.DB.DatabaseAggregateCommand;
+        meta(val: any): cloud.DB.DatabaseAggregateCommand;
+        min(val: any): cloud.DB.DatabaseAggregateCommand;
+        millisecond(val: any): cloud.DB.DatabaseAggregateCommand;
+        minute(val: any): cloud.DB.DatabaseAggregateCommand;
+        mod(val: any): cloud.DB.DatabaseAggregateCommand;
+        month(val: any): cloud.DB.DatabaseAggregateCommand;
+        multiply(val: any): cloud.DB.DatabaseAggregateCommand;
+        neq(val: any): cloud.DB.DatabaseAggregateCommand;
+        not(val: any): cloud.DB.DatabaseAggregateCommand;
+        objectToArray(val: any): cloud.DB.DatabaseAggregateCommand;
+        or(val: any): cloud.DB.DatabaseAggregateCommand;
+        pow(val: any): cloud.DB.DatabaseAggregateCommand;
+        push(val: any): cloud.DB.DatabaseAggregateCommand;
+        range(val: any): cloud.DB.DatabaseAggregateCommand;
+        reduce(val: any): cloud.DB.DatabaseAggregateCommand;
+        reverseArray(val: any): cloud.DB.DatabaseAggregateCommand;
+        rtrim(val: any): cloud.DB.DatabaseAggregateCommand;
+        second(val: any): cloud.DB.DatabaseAggregateCommand;
+        setDifference(val: any): cloud.DB.DatabaseAggregateCommand;
+        setEquals(val: any): cloud.DB.DatabaseAggregateCommand;
+        setIntersection(val: any): cloud.DB.DatabaseAggregateCommand;
+        setIsSubset(val: any): cloud.DB.DatabaseAggregateCommand;
+        setUnion(val: any): cloud.DB.DatabaseAggregateCommand;
+        size(val: any): cloud.DB.DatabaseAggregateCommand;
+        slice(val: any): cloud.DB.DatabaseAggregateCommand;
+        split(val: any): cloud.DB.DatabaseAggregateCommand;
+        sqrt(val: any): cloud.DB.DatabaseAggregateCommand;
+        stdDevPop(val: any): cloud.DB.DatabaseAggregateCommand;
+        stdDevSamp(val: any): cloud.DB.DatabaseAggregateCommand;
+        strcasecmp(val: any): cloud.DB.DatabaseAggregateCommand;
+        strLenBytes(val: any): cloud.DB.DatabaseAggregateCommand;
+        strLenCP(val: any): cloud.DB.DatabaseAggregateCommand;
+        substr(val: any): cloud.DB.DatabaseAggregateCommand;
+        substrBytes(val: any): cloud.DB.DatabaseAggregateCommand;
+        substrCP(val: any): cloud.DB.DatabaseAggregateCommand;
+        subtract(val: any): cloud.DB.DatabaseAggregateCommand;
+        sum(val: any): cloud.DB.DatabaseAggregateCommand;
+        switch(val: any): cloud.DB.DatabaseAggregateCommand;
+        toBool(val: any): cloud.DB.DatabaseAggregateCommand;
+        toDate(val: any): cloud.DB.DatabaseAggregateCommand;
+        toDecimal(val: any): cloud.DB.DatabaseAggregateCommand;
+        toDouble(val: any): cloud.DB.DatabaseAggregateCommand;
+        toInt(val: any): cloud.DB.DatabaseAggregateCommand;
+        toLong(val: any): cloud.DB.DatabaseAggregateCommand;
+        toObjectId(val: any): cloud.DB.DatabaseAggregateCommand;
+        toString(val: any): cloud.DB.DatabaseAggregateCommand;
+        toLower(val: any): cloud.DB.DatabaseAggregateCommand;
+        toUpper(val: any): cloud.DB.DatabaseAggregateCommand;
+        trim(val: any): cloud.DB.DatabaseAggregateCommand;
+        trunc(val: any): cloud.DB.DatabaseAggregateCommand;
+        type(val: any): cloud.DB.DatabaseAggregateCommand;
+        week(val: any): cloud.DB.DatabaseAggregateCommand;
+        year(val: any): cloud.DB.DatabaseAggregateCommand;
+        zip(val: any): cloud.DB.DatabaseAggregateCommand;
+    };
+    export class DataBase {
+        constructor(optins?: {});
+        _table: any;
+        _useTable: any;
+        setTable(table: any): void;
+        get collection(): cloud.DB.CollectionReference;
+        getServerDate(args?: {}): cloud.DB.ServerDate;
+        use(table: any): this;
+        resetTable(): void;
+        exec(executor: any): Promise<any>;
+        countBy(where: any): Promise<any>;
+        queryBy(where: any, field?: {}, order?: {}, limit?: number, skip?: number): Promise<any>;
+        add(data: any): Promise<any>;
+        deleteBy(where: any): Promise<any>;
+        updateBy(where: any, data: any): Promise<any>;
+        queryOne(where: any, field?: {}, order?: {}): Promise<any>;
+        queryOneById(id: any): Promise<any>;
+        deleteById(id: any): Promise<any>;
+        updateById(id: any, data: any): Promise<any>;
     }
+    import cloud = require("wx-server-sdk");
 }
-
-export = WxCloudSdk
+declare module "remoteInvoke" {
+    export = RemoteInvoke;
+    class RemoteInvoke {
+        static getInstance(...args: any[]): any;
+        static getDefaultInstance(): any;
+        constructor({ appId, appSecret, env, funcName }?: {
+            appId: any;
+            appSecret: any;
+            env: any;
+            funcName: any;
+        });
+        config: {
+            appId: any;
+            appSecret: any;
+            env: any;
+            funcName: any;
+        };
+        _checkConfig(): void;
+        _setConfig(config: any): void;
+        invoke(params?: {}, options?: {}): Promise<any>;
+    }
+    namespace RemoteInvoke {
+        export { _default as default };
+    }
+    const _default: any;
+    export default _default;
+}
+declare module "wx-cloud-sdk" {
+    import cloudRemoteInvoke = require("remoteInvoke");
+    import cloudDatabase = require("cdb");
+    export { cloudRemoteInvoke as CloudFunctionInvoke, cloudDatabase as CloudDatabase };
+}

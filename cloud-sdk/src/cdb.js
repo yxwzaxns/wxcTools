@@ -18,7 +18,7 @@ class DataBase {
     return db.collection(this._useTable)
   }
 
-  getServerDate(args){
+  getServerDate(args={}){
     return db.serverDate(args)
   }
 
