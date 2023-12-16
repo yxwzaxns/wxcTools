@@ -1,15 +1,4 @@
-# wxcTools
+## Weixin SDK
 
-## Install
-```
-npm i wxctools
-```
-## Usage
-```js
-const {combot, cloudsdk} = require('wxctools')
-
-```
-
-## Doc
-1. [wxctools.combot](https://www.npmjs.com/package/wecombot)
-2. [wxctools.cloudsdk](https://www.npmjs.com/package/wx-cloud-sdk)
+1. [企业微信机器人 SDK : wecombot](https://www.npmjs.com/package/wecombot)
+2. [微信云开发 SDK : wx-cloud-sdk](https://www.npmjs.com/package/wx-cloud-sdk)
