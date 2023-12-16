@@ -1,29 +1,17 @@
-const axios = require('axios').default
-const utils = require('uni-utils')
+const { Ktcs } = require('ktcs')
 const cloud = require('wx-server-sdk')
 
 exports.loadDevEnv = async function () {
-    const config = {
-        csUrl: process.env['CS_URL'],
-        csToken: process.env['CS_TOKEN'],
-        appEnv: process.env['APP_ENV'],
-        appToken: process.env['APP_TOKEN'],
-        csKey: process.env['CS_KEY']
-    }
-    const timeStamp = utils.getTimeStamp()
-    const {data:{data:envList}} = await axios.post(
-        `https://${config.csUrl}/dev/env`,
-        {
-            keyId: config.csKey,
-            token: config.appToken,
-            env: config.appEnv
-        },
-        {
-            headers: {
-                'token': utils.hash.sha1(`${config.csToken}-u-${timeStamp}`) + ':' + timeStamp
-            }
-        },
-    )
+    const ktcs = new Ktcs()
+    ktcs.setConfig({
+        url: process.env['CS_URL'],
+        token: process.env['CS_TOKEN']
+    })
+    const envList = await ktcs.getWxCfEnv(
+        process.env['CS_KEY'],
+        process.env['APP_ENV'],
+        process.env['APP_TOKEN'],
+        'cloud-sdk dev test')
 
     if (!envList) throw Error('load env error')
 
@@ -32,6 +20,6 @@ exports.loadDevEnv = async function () {
     }
 
     cloud.init({
-        env: config.appEnv
+        env: process.env['APP_ENV']
     })
 }
