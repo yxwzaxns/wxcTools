@@ -1,11 +1,12 @@
 {
   "name": "wx-cloud-sdk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "微信云开发相关功能封装",
   "main": "index.js",
   "homepage": "https://github.com/yxwzaxns/wxcTools",
   "scripts": {
-    "test:cdb": "node ./test/cdb.test.js"
+    "test:cdb": "node ./test/cdb.test.js",
+    "build:d.ts": "npx -p typescript tsc"
   },
   "author": "aong",
   "license": "MIT",
