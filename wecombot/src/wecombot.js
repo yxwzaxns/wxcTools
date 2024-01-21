@@ -68,13 +68,21 @@ class Wecombot extends Base {
     return this.sendImageNotice
   }
 
-  async sendTextNotice(msg, toAll){
+  async sendTextNotice(msg, options){
+    let toAll = false
+    let removePreset = false
+    if(typeof options === 'boolean'){
+      toAll = options
+    }else if(typeof options === 'object'){
+      toAll = options.toAll
+      removePreset = options.removePreset
+    }
     const time = this.getTime()
     const data = {
       msgtype: 'text',
       text: {
         mentioned_list: [],
-        content: `时间: ${time}\n` + msg
+        content: removePreset ? msg : (`时间: ${time}\n` + msg)
       }
     }
     if(toAll){

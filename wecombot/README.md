@@ -22,5 +22,14 @@ wecombot.sendImage({
 })
 ```
 
+## options
+
+```js
+/**
+ * @removePreset boolean 移除预置的时间头信息
+ * @toAll boolean @所有人
+ */
+```
+
 
 

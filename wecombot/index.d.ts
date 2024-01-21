@@ -3,9 +3,15 @@ type Res = {
     data: unknown
 }
 
+type TextNoticeOptions = {
+    toAll: boolean
+    removePreset: boolean
+} | boolean
+
+
 declare class WecomBot {
-    send(text: string, toAll?: boolean): Promise<Res>
-    sendTextNotice(text: string, toAll?: boolean): Promise<Res>
+    send(text: string, options?: TextNoticeOptions): Promise<Res>
+    sendTextNotice(text: string, options?: TextNoticeOptions): Promise<Res>
     sendImageNotice(image: {
         base64: string
         md5: string
