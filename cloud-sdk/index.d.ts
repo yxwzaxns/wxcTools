@@ -110,6 +110,7 @@ declare module "cdb" {
     };
     export class DataBase {
         constructor(optins?: {});
+        db: cloud.DB.Database;
         _table: any;
         _useTable: any;
         setTable(table: any): void;

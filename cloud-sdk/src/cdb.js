@@ -4,6 +4,8 @@ const _ = db.command
 const $ = db.command.aggregate
 
 class DataBase {
+  db = db
+  
   constructor(optins = {}){
     this._table = optins.table
     this._useTable = this._table
